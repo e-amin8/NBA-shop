@@ -1,7 +1,7 @@
 package com.eamin8.NBAshop.model;
 
 import jakarta.persistence.*;
-import java.util.Set;
+// import java.util.Set;
 
 @Entity
 @Table(name = "users")
