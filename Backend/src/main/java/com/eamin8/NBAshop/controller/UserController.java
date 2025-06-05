@@ -5,8 +5,6 @@ import com.eamin8.NBAshop.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.*;
 
 
 @CrossOrigin(origins = "http://localhost:3000")
@@ -20,9 +18,9 @@ public class UserController {
         this.service = service;
     }
 
-    @PostMapping
-    public User create(@RequestBody User user) {
-        return service.save(user);
+    @PostMapping("/register")
+    public User register(@RequestBody User user) {
+        return service.registerUser(user);
     }
 
     @GetMapping("/{username}")
